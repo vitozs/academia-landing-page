@@ -5,7 +5,8 @@
 
 body{
     font-family: 'Inter', sans-serif;
-    background-color: rgb(80, 77, 77);
+    background-color: rgb(58, 57, 57);
+
 }
 
 h1{
@@ -28,17 +29,41 @@ header{
 }
 
 .menu-links ul li{
-    margin: 10px;
+    margin: 30px;
 }
 
-.menu-links ul a{
+.menu-links ul li a{
     text-decoration: none;
     color: white;
+    padding:  0 30px 10px 30px;
+    position: relative;
+    letter-spacing: 2px;
+    font-weight: 500;
+  
 }
 
-.menu-links ul a:hover{
-    color: yellow;
+.menu-links ul li a::after{
+  content: "";
+  background: none repeat scroll 0 0 transparent;
+  position: absolute;
+  background-color: yellow;
+  display: block;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.4s ease-in-out 0s, left 0.4s ease-in-out 0s;
+
+  
+
 }
+
+
+.menu-links ul li a:hover::after {
+	width: 100%;
+  left: 0;
+}
+
 
 /***************************************************************
 HOME*/
@@ -105,6 +130,21 @@ HOME*/
     height: 300px;
     background-color: rgb(71, 70, 70);
     margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .planos-box h2{
+    letter-spacing: 2px;
+  }
+
+  .planos-box p {
+    font-size: 1.2em;
+    font-weight: 500;
   }
 
   /**************************************************************
@@ -134,6 +174,38 @@ HOME*/
     margin-bottom: 40px;
   }
 
+  /********************************************************
+  Espaço*/
+  .espaco{
+    text-align: center;
+    padding: 20px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .espaco hr {
+    background-color: gray;
+    width: 50%;
+    padding: 2px;
+    margin-bottom: 50px;
+  }
+
+  .espaco-all{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .espaco img{
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+  }
 
   /*******************************************************
   Rodapé*/
