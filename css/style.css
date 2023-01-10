@@ -13,6 +13,10 @@ h1{
     font-size: 3em;
 }
 
+html,body{
+  overflow-x: hidden;
+}
+
 header{
     background-color: rgb(12, 12, 12,0.75);
     padding: 20px;
@@ -64,7 +68,9 @@ header{
   left: 0;
 }
 
-
+.hamburguer-menu{
+  display: none;
+}
 /***************************************************************
 HOME*/
 
@@ -174,6 +180,11 @@ HOME*/
     margin-bottom: 40px;
   }
 
+  .local iframe{
+    width: 500px;
+    height: 55%;
+  }
+
   /********************************************************
   Espaço*/
   .espaco{
@@ -205,6 +216,7 @@ HOME*/
     width: 400px;
     height: 300px;
     margin: 10px;
+    object-fit: cover;
   }
 
   /*******************************************************
@@ -239,4 +251,88 @@ HOME*/
     background: #535252;
     border-radius: 50px;
 
+}
+
+
+
+@media (max-width: 1200px){
+  html, body{
+    overflow-x: hidden;
+  }
+
+  .planos{
+    height: 100%;
+  }  
+  .planos-all{
+      flex-wrap: wrap;
+    }
+
+    .espaco{
+      height: 100%;
+    }
+    .espaco-all{
+      flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 800px){
+  footer{
+    display: block;
+    height: 100%;
+    padding: 30px;
+
+  }
+}
+@media (max-width:630px){
+  .menu-links{
+    display: none;
+  }
+
+  .hamburguer-menu{
+    display: block;
+  }
+}
+@media (max-width:530px){
+  h1{
+    font-size: 2em;
+  }
+
+  .home::before{
+    background-position: center center;
+  }
+
+  .local{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .local-text{
+    margin-bottom: 30px;
+  }
+
+  .local iframe{
+    width: 300px;
+  }
+
+
+  
+}
+
+@media (max-width:390px){
+  h1{
+    font-size: 1.5em;
+  }
+  .espaco img{
+    width: 250px;
+    height: 150px;
+  }
+
+  .local iframe{
+    margin-top: 70px;
+    width: 90%;
+    height: 30%;
+  }
 }
