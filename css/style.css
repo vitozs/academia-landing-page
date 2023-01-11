@@ -16,15 +16,25 @@ h1{
 html,body{
   overflow-x: hidden;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 header{
     background-color: rgb(12, 12, 12,0.75);
-    padding: 20px;
+    padding: 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     position: sticky;
 }
-
+header img{
+  filter: invert(100%);
+}
+header button{
+  background: transparent;
+  border: none;
+  outline: none;
+}
 .menu-links ul{
     list-style: none;
     display: flex;
@@ -62,15 +72,27 @@ header{
 
 }
 
-
 .menu-links ul li a:hover::after {
 	width: 100%;
   left: 0;
 }
 
+.menu-mobile{
+  display: none;
+
+}
+
 .hamburguer-menu{
   display: none;
+  color: white;
+  font-size: 3em;
 }
+
+.open{
+  display: block;
+
+}
+
 /***************************************************************
 HOME*/
 
@@ -142,6 +164,7 @@ HOME*/
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    box-shadow: 0 0 1em rgb(0, 0, 0);
   }
 
   .planos-box h2{
@@ -236,7 +259,7 @@ HOME*/
 
   footer h1{
     font-size: 1em;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 
   }
 
@@ -282,12 +305,54 @@ HOME*/
     padding: 30px;
 
   }
-}
+  footer div{
+    margin-bottom: 30px;
+  }
+  header{
+    justify-content: space-between;
+  }
+  .menu-links{
+    display: none;
+  }
+  
+  .hamburguer-menu{
+    display: block;
+  }
+
+  .menu-mobile{
+    background-color: rgb(12, 12, 12,0.75);
+    padding: 20px;
+
+
+  }
+
+  }
+  .menu-mobile ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  .menu-mobile ul li{
+    margin-bottom: 10px;
+  }
+  .menu-mobile ul li a{
+    text-decoration: none;
+    color: white;
+
+  }
+
 @media (max-width:630px){
   .menu-links{
     display: none;
   }
 
+  header{
+    justify-content: space-between;
+
+  }
   .hamburguer-menu{
     display: block;
   }

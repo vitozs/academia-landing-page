@@ -16,40 +16,61 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
-
+    <script src="script/menu.js" defer></script>
 </head>
 <body>
     <header>
+        <img src="imgs/logo.png" alt="" style="width: 80px; height: 70px; color: white;">
         <nav class="menu-links">
             <ul>
                 <li>
                     <a href="">HOME</a>
                 </li>
                 <li>
-                    <a href="">PLANOS</a>
+                    <a href="#planos">NOSSOS PLANOS</a>
                 </li>
                 <li>
-                    <a href="">CONTATO</a>
+                    <a href="#espaco">ESPAÇO</a>
                 </li>
                 <li>
-                    <a href="">AVALIAÇÕES</a>
+                    <a href="#local">LOCAL</a>
                 </li>
             </ul>
         </nav>
-        <div class="hamburguer-menu">
-            <i class="bi bi-list"></i>
-        </div>
-    </header>
+        
+        <button onclick="menuMobile()" class="hamburguer-menu">
+            <i id='hamb-menu'class="bi bi-list"></i>
+        </button>
+        
 
+    </header>
+    
+    <nav class="menu-mobile">
+        <ul>
+            <li>
+                <a href="">HOME</a>
+            </li>
+            <li>
+                <a href="">PLANOS</a>
+            </li>
+            <li>
+                <a href="">CONTATO</a>
+            </li>
+            <li>
+                <a href="">AVALIAÇÕES</a>
+            </li>
+        </ul>
+    </nav>
+   
     <section class="home">
         
         <div class="home-texto">
-            <h1>Comece a treinar com a gente!</h1>
+            <h1>Venha treinar com a gente!</h1>
         </div>
         
     </section>
     
-    <section class="planos">
+    <section id='planos' class="planos">
         <h1>Nossos planos</h1>
 
         <div class="planos-all">
@@ -84,7 +105,7 @@
         
     </section>
     
-    <section class="espaco">
+    <section id='espaco' class="espaco">
         <hr>
         <h1>Nosso espaço</h1>
         <div class="espaco-all">
@@ -98,7 +119,7 @@
         </div>
     </section>
     
-    <section class="local">
+    <section id='local' class="local">
         
         <div class ='local-text'>
             <h1>Venha nos conhecer!</h1>
