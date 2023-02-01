@@ -290,12 +290,14 @@ HOME*/
       flex-wrap: wrap;
     }
 
-    .espaco{
+  .espaco{
       height: 100%;
     }
-    .espaco-all{
+  .espaco-all{
       flex-wrap: wrap;
     }
+
+
 }
 
 @media (max-width: 800px){
